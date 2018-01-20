@@ -11,10 +11,14 @@ import {
     Text,
     View,
 } from 'react-native';
-import Home from './src/components/Home.js'
+
 import{
     Router, Scene,
 } from 'react-native-router-flux'
+
+//Componenets
+import Login from "./src/components/Login";
+import Home from "./src/components/Home";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -24,11 +28,12 @@ const instructions = Platform.select({
 });
 
 //Manages navigation
-export default class App extends Component<{}> {
+export default class App extends Component {
     render() {
         return (
             <Router>
                 <Scene key='root'>
+                    <Scene key='login' component={Login} title='Login'/>
                     <Scene key='home' component={Home} title='Home'/>
                 </Scene>
             </Router>
