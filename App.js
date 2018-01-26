@@ -16,17 +16,38 @@ import{
     Router, Scene,
 } from 'react-native-router-flux'
 
+import {StackNavigator,
+        DrawerNavigator
+} from "react-navigation";
+
 //Componenets
 import Login from "./src/components/Login";
 import Home from "./src/components/Home";
+import Page1 from "./src/components/Page1";
+import Page2 from "./src/components/Page2";
+import DrawerMenu from "./src/components/DrawerMenu";
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+
+const MainScreenNavigator = StackNavigator({
+    login: {screen: Login},
+    home: {screen:Home},
+    testPage1: {screen: Page1},
+    testPage2: {screen: Page2}
 });
 
+const Drawer = DrawerNavigator(
+    {
+        Main:{screen: Home}
+    },
+    {
+        contentComponent: DrawerMenu,
+        drawerWidth:200
+    }
+);
+
+export default Drawer;
+
+/*
 //Manages navigation
 export default class App extends Component {
     render() {
@@ -59,3 +80,4 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+*/
