@@ -1,4 +1,38 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppRegistry, Dimensions} from 'react-native';
+import { DrawerNavigator } from 'react-navigation';
+
+//Components
+import HeaderComponent from './src/components/HeaderComponent';
+import HomeScreen from './src/screens/Home';
+import LoginScreen from './src/screens/Login';
+import SettingsScreen from './src/screens/Settings';
+//import App from './App';
+
+var{height,width} = Dimensions.get('window');
+
+let drawerRouteConfig = {
+    Home: {
+        screen:HomeScreen,
+    },
+    Settings: {
+        screen: SettingsScreen,
+    },
+    Login: {
+        screen: LoginScreen,
+    },
+};
+let drawerNavConfig = {
+    initialRouteName:'Login',
+    drawerWidth: width / 3,
+    drawerPosition: 'left',
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRouteRoute: 'DrawerToggle',
+    contentOptions: {
+        activeTintColor:'red',
+    }
+};
+
+const App = DrawerNavigator(drawerRouteConfig,drawerNavConfig);
 
 AppRegistry.registerComponent('syeApp', () => App);
