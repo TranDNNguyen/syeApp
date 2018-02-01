@@ -10,6 +10,8 @@ import{
     TouchableOpacity,
 } from 'react-native';
 
+//import Camera from 'react-native-camera';
+
 //Components
 import HeaderComponent from '../components/HeaderComponent';
 
@@ -40,7 +42,8 @@ class HomeScreen extends React.Component{
         return(
             <View style={styles.container}>
                 <HeaderComponent {...this.props}/>
-                <View style={{flex:3,alignItems:'center',width:'100%',}}>
+                <Text>{this.props.name}</Text>
+                <View style={{flex:4,alignItems:'center',width:'100%',}}>
                     <ScrollView style={{width:'95%', height:100}}>
                         {
                             this.state.names.map((item,index)=>(
@@ -57,7 +60,7 @@ class HomeScreen extends React.Component{
 
                 <View style={{flex:1, alignItems:'center'}}>
                     <TouchableOpacity
-                        style={styles.camOpen}>
+                        style={styles.camButton}>
                         <Image
                             source={{uri:'http://2.bp.blogspot.com/-V31y2Ef4Ad0/VZservQf70I/AAAAAAAAdu8/ErI--hbXwfE/s1600/OpenCamera1.png'}}
                             style={{width:70, height:70,top:-2}}/>
@@ -84,7 +87,7 @@ var styles = StyleSheet.create({
         alignContent:'center',
         borderBottomWidth:2,
     },
-    camOpen:{
+    camButton:{
         width:70,
         height:70,
         top:20,

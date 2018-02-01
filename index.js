@@ -23,13 +23,13 @@ let drawerRouteConfig = {
 };
 let drawerNavConfig = {
     initialRouteName:'Login',
-    drawerWidth: width / 3,
+    drawerWidth: width / 2,
     drawerPosition: 'left',
     drawerOpenRoute: 'DrawerOpen',
     drawerCloseRoute: 'DrawerClose',
     drawerToggleRouteRoute: 'DrawerToggle',
     contentOptions: {
-        activeTintColor:'red',
+        activeTintColor:'#265ae3',
     }
 };
 
