@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/icons",
+    "width": 256,
+    "height": 256,
+    "scales": [1],
+    "hash": "aac5147d76dfc1fe6374f615fb8507bf",
+    "name": "menuButton",
+    "type": "png"
+  });
+});

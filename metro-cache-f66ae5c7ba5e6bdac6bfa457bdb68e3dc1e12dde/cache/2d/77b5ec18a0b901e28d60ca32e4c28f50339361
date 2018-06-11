@@ -1,0 +1,277 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _class,
+        _temp2,
+        _jsxFileName = "/home/tran/keytax/syeApp/src/screens/Home.js";
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _reactNativeCamera = require(_dependencyMap[3], "react-native-camera");
+
+    var _reactNativeCamera2 = _interopRequireDefault(_reactNativeCamera);
+
+    var _HeaderComponent = require(_dependencyMap[4], "../components/HeaderComponent");
+
+    var _HeaderComponent2 = _interopRequireDefault(_HeaderComponent);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        HomeScreen: {
+            displayName: "HomeScreen"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/home/tran/keytax/syeApp/src/screens/Home.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var HomeScreen = _wrapComponent("HomeScreen")((_temp2 = _class = function (_React$Component) {
+        _inherits(HomeScreen, _React$Component);
+
+        function HomeScreen() {
+            var _ref;
+
+            var _temp, _this, _ret;
+
+            _classCallCheck(this, HomeScreen);
+
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomeScreen.__proto__ || Object.getPrototypeOf(HomeScreen)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                names: [{
+                    'name': 'Receipt 1',
+                    'id': 1
+                }, {
+                    'name': 'Receipt 2',
+                    'id': 2
+                }, {
+                    'name': 'Receipt 3',
+                    'id': 3
+                }, {
+                    'name': 'Receipt 4',
+                    'id': 4
+                }, {
+                    'name': 'Receipt 5',
+                    'id': 5
+                }, {
+                    'name': 'Receipt 6',
+                    'id': 6
+                }, {
+                    'name': 'Receipt 7',
+                    'id': 7
+                }, {
+                    'name': 'Receipt 8',
+                    'id': 8
+                }, {
+                    'name': 'Receipt 9',
+                    'id': 9
+                }]
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+
+        _createClass(HomeScreen, [{
+            key: "render",
+            value: function render() {
+                var navigate = this.props.navigation.navigate;
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        style: styles.container,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 43
+                        }
+                    },
+                    _react3.default.createElement(_HeaderComponent2.default, _extends({}, this.props, {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 44
+                        }
+                    })),
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 45
+                            }
+                        },
+                        this.props.name
+                    ),
+                    _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: {
+                                flex: 4,
+                                alignItems: 'center',
+                                width: '100%'
+                            },
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 46
+                            }
+                        },
+                        _react3.default.createElement(
+                            _reactNative.ScrollView,
+                            {
+                                style: {
+                                    width: '95%',
+                                    height: 100
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 47
+                                }
+                            },
+                            this.state.names.map(function (item, index) {
+                                return _react3.default.createElement(
+                                    _reactNative.TouchableOpacity,
+                                    {
+                                        style: styles.item,
+                                        key: item.id,
+                                        onPress: function onPress() {
+                                            alert(item.name);
+                                        },
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 50
+                                        }
+                                    },
+                                    _react3.default.createElement(
+                                        _reactNative.Text,
+                                        {
+                                            __source: {
+                                                fileName: _jsxFileName,
+                                                lineNumber: 54
+                                            }
+                                        },
+                                        item.name
+                                    )
+                                );
+                            })
+                        )
+                    ),
+                    _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: {
+                                flex: 1,
+                                alignItems: 'center'
+                            },
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 61
+                            }
+                        },
+                        _react3.default.createElement(
+                            _reactNative.TouchableOpacity,
+                            {
+                                style: styles.camButton,
+                                onPress: function onPress() {
+                                    return navigate("Camera");
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 62
+                                }
+                            },
+                            _react3.default.createElement(_reactNative.Image, {
+                                source: {
+                                    uri: 'http://2.bp.blogspot.com/-V31y2Ef4Ad0/VZservQf70I/AAAAAAAAdu8/ErI--hbXwfE/s1600/OpenCamera1.png'
+                                },
+                                style: {
+                                    width: 70,
+                                    height: 70,
+                                    top: -2
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 66
+                                }
+                            })
+                        )
+                    )
+                );
+            }
+        }]);
+
+        return HomeScreen;
+    }(_react3.default.Component), _class.navigationOptions = function (_ref2) {
+        var navigation = _ref2.navigation;
+        var title = 'Home';
+        var drawerLabel = 'Home';
+        var headerLeft = null;
+        return {
+            title: title,
+            drawerLabel: drawerLabel,
+            headerLeft: headerLeft
+        };
+    }, _temp2));
+
+    var styles = _reactNative.StyleSheet.create({
+        container: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: '#F5FCFF'
+        },
+        title: {
+            fontSize: 24,
+            fontWeight: 'bold'
+        },
+        centeredContent: {
+            alignItems: 'center',
+            alignContent: 'center',
+            borderBottomWidth: 2
+        },
+        camButton: {
+            width: 70,
+            height: 70,
+            top: 20,
+            justifyContent: 'center'
+        },
+        item: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: 25,
+            borderColor: '#030303',
+            borderBottomWidth: 1
+        }
+    });
+
+    exports.default = HomeScreen;
+});

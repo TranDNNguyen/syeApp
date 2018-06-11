@@ -10,7 +10,7 @@ import{
     TouchableOpacity,
 } from 'react-native';
 
-//import Camera from 'react-native-camera';
+import Camera from 'react-native-camera';
 
 //Components
 import HeaderComponent from '../components/HeaderComponent';
@@ -60,7 +60,9 @@ class HomeScreen extends React.Component{
 
                 <View style={{flex:1, alignItems:'center'}}>
                     <TouchableOpacity
-                        style={styles.camButton}>
+                        style={styles.camButton}
+			            onPress={() => navigate("Camera")}
+		            >
                         <Image
                             source={{uri:'http://2.bp.blogspot.com/-V31y2Ef4Ad0/VZservQf70I/AAAAAAAAdu8/ErI--hbXwfE/s1600/OpenCamera1.png'}}
                             style={{width:70, height:70,top:-2}}/>
@@ -73,7 +75,7 @@ class HomeScreen extends React.Component{
 
 var styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, //**video tut
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
@@ -100,6 +102,6 @@ var styles = StyleSheet.create({
         padding: 25,
         borderColor: '#030303',
         borderBottomWidth: 1,
-    },
+ },
 });
 export default HomeScreen;

@@ -1,6 +1,7 @@
 package com.syeapp;
 
 import com.facebook.react.ReactActivity;
+//import con.reactLibrary.RNTesseractOcrPackage;
 
 public class MainActivity extends ReactActivity {
 

@@ -1,0 +1,69 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+    var _reactNative = require(_dependencyMap[0], "react-native");
+
+    var _reactNavigation = require(_dependencyMap[1], "react-navigation");
+
+    var _HeaderComponent = require(_dependencyMap[2], "./src/components/HeaderComponent");
+
+    var _HeaderComponent2 = _interopRequireDefault(_HeaderComponent);
+
+    var _Home = require(_dependencyMap[3], "./src/screens/Home");
+
+    var _Home2 = _interopRequireDefault(_Home);
+
+    var _Login = require(_dependencyMap[4], "./src/screens/Login");
+
+    var _Login2 = _interopRequireDefault(_Login);
+
+    var _Settings = require(_dependencyMap[5], "./src/screens/Settings");
+
+    var _Settings2 = _interopRequireDefault(_Settings);
+
+    var _Camera = require(_dependencyMap[6], "./src/screens/Camera");
+
+    var _Camera2 = _interopRequireDefault(_Camera);
+
+    var _ReviewReceipt = require(_dependencyMap[7], "./src/screens/ReviewReceipt");
+
+    var _ReviewReceipt2 = _interopRequireDefault(_ReviewReceipt);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    var _Dimensions$get = _reactNative.Dimensions.get('window'),
+        height = _Dimensions$get.height,
+        width = _Dimensions$get.width;
+
+    var drawerRouteConfig = {
+        Home: {
+            screen: _Home2.default
+        },
+        Settings: {
+            screen: _Settings2.default
+        },
+        Login: {
+            screen: _Login2.default
+        },
+        Camera: {
+            screen: _Camera2.default
+        },
+        ReviewReceipt: {
+            screen: _ReviewReceipt2.default
+        }
+    };
+    var drawerNavConfig = {
+        initialRouteName: 'Login',
+        drawerWidth: width / 2,
+        drawerPosition: 'left',
+        drawerOpenRoute: 'DrawerOpen',
+        drawerCloseRoute: 'DrawerClose',
+        drawerToggleRouteRoute: 'DrawerToggle',
+        contentOptions: {
+            activeTintColor: '#265ae3'
+        }
+    };
+    var App = (0, _reactNavigation.DrawerNavigator)(drawerRouteConfig, drawerNavConfig);
+
+    _reactNative.AppRegistry.registerComponent('syeApp', function () {
+        return App;
+    });
+});
