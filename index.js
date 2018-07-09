@@ -6,6 +6,8 @@ import HeaderComponent from './src/components/HeaderComponent';
 import HomeScreen from './src/screens/Home';
 import LoginScreen from './src/screens/Login';
 import SettingsScreen from './src/screens/Settings';
+import CameraScreen from './src/screens/Camera'
+import ReviewReceiptScreen from "./src/screens/ReviewReceipt";
 //import App from './App';
 
 var{height,width} = Dimensions.get('window');
@@ -15,11 +17,17 @@ let drawerRouteConfig = {
         screen:HomeScreen,
     },
     Settings: {
-        screen: SettingsScreen,
+        screen:SettingsScreen,
     },
     Login: {
-        screen: LoginScreen,
+        screen:LoginScreen,
     },
+    Camera: {
+        screen:CameraScreen,
+    },
+    ReviewReceipt: {
+        screen:ReviewReceiptScreen,
+    }
 };
 let drawerNavConfig = {
     initialRouteName:'Login',
